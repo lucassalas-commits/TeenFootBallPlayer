@@ -2,12 +2,12 @@
 <html>
 <head>
   <title>Teen Football - The Best rookie Football Player in NFL</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
   <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Splash Screen with Split Animation -->
   <div class="splash-screen" id="splashScreen">
     <div class="split-container">
       <div class="image-left">
@@ -19,70 +19,289 @@
     </div>
   </div>
 
-  <!-- Main Content -->
   <div class="main-content" id="mainContent" style="display: none;">
-    <ul class="navigation">
-      <li><img src="d9e04080-9cdf-48f2-b740-dba0172914d1.png" height="20px;" alt="Teen Football Logo"></li>
-      <li class="active">Action List</li>
-      <li>Profiles</li>
-      <li>Settings</li>
-    </ul>
+    <header class="topbar">
+      <div class="brand">
+        <img src="d9e04080-9cdf-48f2-b740-dba0172914d1.png" alt="Teen Football Logo">
+        <span>Teen Football</span>
+      </div>
 
-    <div class="search">Search the table</div>
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="#" class="active">Action List</a>
+        <a href="#prospects">Profiles</a>
+        <a href="#news">News</a>
+        <a href="#">Settings</a>
+      </nav>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Player</th>
-          <th>State</th>
-          <th>Ovr.</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Antonio Williams</td>
-          <td>South Carolina</td>
-          <td>91.2</td>
-        </tr>
-        <tr>
-          <td>Jeremiyah Love</td>
-          <td>Indiana</td>
-          <td>82</td>
-        </tr>
-        <tr>
-          <td>Peter Woods</td>
-          <td>South Carolina</td>
-          <td>76</td>
-        </tr>
-        <tr>
-          <td>Austin Barber</td>
-          <td>Florida</td>
-          <td>73</td>
-        </tr>
-        <tr>
-          <td>Fernando Mendoza</td>
-          <td>Indiana</td>
-          <td>74</td>
-        </tr>
-      </tbody>
-    </table>
+      <button class="nav-button">Scout Report</button>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Rookie Spotlight</p>
+          <h1>Next generation of NFL talent starts here.</h1>
+          <p class="lead">
+            Track rising teen football stars, monitor their ratings, and discover the next elite prospect in the league.
+          </p>
+
+          <div class="hero-actions">
+            <button class="primary-btn">View Profile</button>
+            <button class="secondary-btn">See Rankings</button>
+          </div>
+
+          <div class="metric-row">
+            <div>
+              <strong>24</strong>
+              <span>Prospects</span>
+            </div>
+            <div>
+              <strong>91.2</strong>
+              <span>Top OVR</span>
+            </div>
+            <div>
+              <strong>7</strong>
+              <span>States</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-spotlight card">
+          <div class="rating-badge">97 OVR</div>
+          <img src="d9e04080-9cdf-48f2-b740-dba0172914d1.png" alt="Featured player">
+          <div class="player-info">
+            <h2>Antonio Williams</h2>
+            <p>Wide Receiver • South Carolina</p>
+            <div class="stat-tags">
+              <span>Speed 96</span>
+              <span>Hands 94</span>
+              <span>Route 92</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolbar">
+        <div class="search-wrap">
+          <label for="playerSearch">Search players</label>
+          <input id="playerSearch" type="text" placeholder="Search by player, state, or position">
+        </div>
+
+        <div class="filter-row" aria-label="Filter by state">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="south-carolina">South Carolina</button>
+          <button class="chip" data-filter="indiana">Indiana</button>
+          <button class="chip" data-filter="florida">Florida</button>
+        </div>
+      </section>
+
+      <section class="cards-grid" aria-label="Performance cards">
+        <article class="mini-card">
+          <span class="card-label">Top Speed</span>
+          <strong>96.4</strong>
+          <small>Fastest breakaway grade</small>
+        </article>
+        <article class="mini-card accent">
+          <span class="card-label">Pass Accuracy</span>
+          <strong>92.7</strong>
+          <small>Highest quarterback rating</small>
+        </article>
+        <article class="mini-card">
+          <span class="card-label">Power</span>
+          <strong>89.1</strong>
+          <small>Strength and explosiveness</small>
+        </article>
+        <article class="mini-card accent">
+          <span class="card-label">Upside</span>
+          <strong>97</strong>
+          <small>Projected NFL ceiling</small>
+        </article>
+      </section>
+
+      <section class="prospect-panel" id="prospects">
+        <div class="panel-header">
+          <h2>Top Prospects</h2>
+          <a href="#">View all</a>
+        </div>
+
+        <div class="prospect-grid">
+          <article class="prospect-card">
+            <div class="avatar">AW</div>
+            <div class="prospect-copy">
+              <h3>Antonio Williams</h3>
+              <p>WR • South Carolina</p>
+            </div>
+            <span class="rating-pill">91.2</span>
+          </article>
+
+          <article class="prospect-card">
+            <div class="avatar alt">JL</div>
+            <div class="prospect-copy">
+              <h3>Jeremiyah Love</h3>
+              <p>RB • Indiana</p>
+            </div>
+            <span class="rating-pill">82.0</span>
+          </article>
+
+          <article class="prospect-card">
+            <div class="avatar">PW</div>
+            <div class="prospect-copy">
+              <h3>Peter Woods</h3>
+              <p>DL • South Carolina</p>
+            </div>
+            <span class="rating-pill">76.0</span>
+          </article>
+
+          <article class="prospect-card">
+            <div class="avatar alt">AB</div>
+            <div class="prospect-copy">
+              <h3>Austin Barber</h3>
+              <p>OT • Florida</p>
+            </div>
+            <span class="rating-pill">73.0</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="table-section">
+        <div class="panel-header">
+          <h2>Player Rankings</h2>
+          <span>Updated this week</span>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Position</th>
+              <th>State</th>
+              <th>Ovr.</th>
+              <th>Trend</th>
+            </tr>
+          </thead>
+          <tbody id="playerTableBody">
+            <tr data-state="south-carolina" data-position="wr">
+              <td>Antonio Williams</td>
+              <td>WR</td>
+              <td>South Carolina</td>
+              <td>91.2</td>
+              <td>▲ 4.7</td>
+            </tr>
+            <tr data-state="indiana" data-position="rb">
+              <td>Jeremiyah Love</td>
+              <td>RB</td>
+              <td>Indiana</td>
+              <td>82.0</td>
+              <td>▲ 2.1</td>
+            </tr>
+            <tr data-state="south-carolina" data-position="dl">
+              <td>Peter Woods</td>
+              <td>DL</td>
+              <td>South Carolina</td>
+              <td>76.0</td>
+              <td>▲ 1.4</td>
+            </tr>
+            <tr data-state="florida" data-position="ot">
+              <td>Austin Barber</td>
+              <td>OT</td>
+              <td>Florida</td>
+              <td>73.0</td>
+              <td>▼ 0.8</td>
+            </tr>
+            <tr data-state="indiana" data-position="qb">
+              <td>Fernando Mendoza</td>
+              <td>QB</td>
+              <td>Indiana</td>
+              <td>74.0</td>
+              <td>▲ 3.3</td>
+            </tr>
+            <tr data-state="florida" data-position="db">
+              <td>Malik Carter</td>
+              <td>DB</td>
+              <td>Florida</td>
+              <td>79.5</td>
+              <td>▲ 2.8</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="news-section" id="news">
+        <div class="panel-header">
+          <h2>Latest Updates</h2>
+          <a href="#">More news</a>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card primary-news">
+            <span class="tag">Analysis</span>
+            <h3>Top 5 breakout freshman prospects to watch this season</h3>
+            <p>Elite athleticism and route-running are creating major buzz across the league.</p>
+          </article>
+
+          <article class="news-card">
+            <span class="tag alt">Recruiting</span>
+            <h3>South Carolina continues to dominate the defensive rankings</h3>
+            <p>Coaches are praising the physicality, speed, and toughness of next-wave talent.</p>
+          </article>
+
+          <article class="news-card">
+            <span class="tag alt">Scouting</span>
+            <h3>Indiana quarterback room gains momentum with more depth</h3>
+            <p>Players are making big jumps in accuracy and decision-making through camp.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Teen Football © 2026</p>
+      <div>
+        <a href="#">Instagram</a>
+        <a href="#">X</a>
+        <a href="#">YouTube</a>
+      </div>
+    </footer>
   </div>
 
   <script>
     const splashScreen = document.getElementById('splashScreen');
     const mainContent = document.getElementById('mainContent');
+    const playerSearch = document.getElementById('playerSearch');
+    const chipButtons = document.querySelectorAll('.chip');
+    const rows = document.querySelectorAll('#playerTableBody tr');
 
-    // Click on splash screen to trigger animation
-    splashScreen.addEventListener('click', function() {
+    splashScreen.addEventListener('click', function () {
       splashScreen.classList.add('active');
 
-      // Show main content after animation completes
       setTimeout(() => {
         splashScreen.style.display = 'none';
         mainContent.style.display = 'block';
-        // Optional: Add fade-in animation to main content
         mainContent.classList.add('fade-in');
-      }, 1000); // Match this with CSS animation duration
+      }, 1000);
+    });
+
+    function filterPlayers() {
+      const query = playerSearch.value.trim().toLowerCase();
+      const activeState = document.querySelector('.chip.active')?.dataset.filter || 'all';
+
+      rows.forEach((row) => {
+        const text = row.textContent.toLowerCase();
+        const rowState = row.dataset.state;
+        const matchesState = activeState === 'all' || rowState === activeState;
+        const matchesQuery = !query || text.includes(query);
+
+        row.style.display = matchesState && matchesQuery ? '' : 'none';
+      });
+    }
+
+    playerSearch.addEventListener('input', filterPlayers);
+
+    chipButtons.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        chipButtons.forEach((button) => button.classList.toggle('active', button === chip));
+        filterPlayers();
+      });
     });
   </script>
 
