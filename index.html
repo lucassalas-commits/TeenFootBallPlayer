@@ -22,45 +22,47 @@
   <!-- Main Content -->
   <div class="main-content" id="mainContent" style="display: none;">
     <ul class="navigation">
-      <li><img src="d9e04080-9cdf-48f2-b740-dba0172914d1.png" height="20px;"></li>
+      <li><img src="d9e04080-9cdf-48f2-b740-dba0172914d1.png" height="20px;" alt="Teen Football Logo"></li>
       <li class="active">Action List</li>
       <li>Profiles</li>
       <li>Settings</li>
     </ul>
 
     <div class="search">Search the table</div>
-    
+
     <table>
-      <tr>
-        <th>Player</th>
-        <th>State</th>
-        <th>Ovr.</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>State</th>
+          <th>Ovr.</th>
+        </tr>
+      </thead>
       <tbody>
         <tr>
           <td>Antonio Williams</td>
-          <td>91.2</td>
           <td>South Carolina</td>
+          <td>91.2</td>
         </tr>
         <tr>
           <td>Jeremiyah Love</td>
-          <td>82</td>
           <td>Indiana</td>
+          <td>82</td>
         </tr>
         <tr>
           <td>Peter Woods</td>
-          <td>76</td>
           <td>South Carolina</td>
+          <td>76</td>
         </tr>
         <tr>
           <td>Austin Barber</td>
-          <td>73</td>
           <td>Florida</td>
+          <td>73</td>
         </tr>
         <tr>
           <td>Fernando Mendoza</td>
-          <td>74</td>
           <td>Indiana</td>
+          <td>74</td>
         </tr>
       </tbody>
     </table>
@@ -73,7 +75,7 @@
     // Click on splash screen to trigger animation
     splashScreen.addEventListener('click', function() {
       splashScreen.classList.add('active');
-      
+
       // Show main content after animation completes
       setTimeout(() => {
         splashScreen.style.display = 'none';
