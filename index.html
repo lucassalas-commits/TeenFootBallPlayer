@@ -1,56 +1,88 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
-<thead>
+<head>
   <title>Teen Football - The Best rookie Football Player in NFL</title>
   <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
   <link href="style.css" type="text/css" rel="stylesheet">
-</thead>
+</head>
 <body>
 
-  <ul class="navigation">
-    <li><img src="d9e04080-9cdf-48f2-b740-dba0172914d1.png" height="20px;"></li>
-    <li class="active">Action List</li>
-    <li>Profiles</li>
-    <li>Settings</li>
-  </ul>
+  <!-- Splash Screen with Split Animation -->
+  <div class="splash-screen" id="splashScreen">
+    <div class="split-container">
+      <div class="image-left">
+        <img src="d9e04080-9cdf-48f2-b740-dba0172914d1.png" alt="Teen Football Logo" class="splash-image">
+      </div>
+      <div class="image-right">
+        <img src="d9e04080-9cdf-48f2-b740-dba0172914d1.png" alt="Teen Football Logo" class="splash-image">
+      </div>
+    </div>
+  </div>
 
-  <div class="search">Search the table</div>
-  
-  <table>
-    <tr>
-      <th>Player</th></th>
-      <th>State</th>
-      <th>Ovr.</th>
-    </tr>
-    <tbody>
-      <tr>
-        <td>Antonio Williams</td>
-        <td>91.2</td>
-        <td>South Carolina</td>
-      </tr>
-      <tr>
-        <td>Jeremiyah Love</td>
-        <td>82</td>
-        <td>Indiana</td>
-      </tr>
-      <tr>
-        <td>Peter Woods</td>
-        <td>76</td>
-        <td>South Carolina</td>
-      </tr>
-      <tr>
-        <td>Austin Barber</td>
-        <td>73</td>
-        <td>Florida</td>
-      </tr>
-      <tr>
-        <td>Fernando Mendoza</td>
-        <td>74</td>
-        <td>Indiana</td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- Main Content -->
+  <div class="main-content" id="mainContent" style="display: none;">
+    <ul class="navigation">
+      <li><img src="d9e04080-9cdf-48f2-b740-dba0172914d1.png" height="20px;"></li>
+      <li class="active">Action List</li>
+      <li>Profiles</li>
+      <li>Settings</li>
+    </ul>
 
+    <div class="search">Search the table</div>
+    
+    <table>
+      <tr>
+        <th>Player</th>
+        <th>State</th>
+        <th>Ovr.</th>
+      </tr>
+      <tbody>
+        <tr>
+          <td>Antonio Williams</td>
+          <td>91.2</td>
+          <td>South Carolina</td>
+        </tr>
+        <tr>
+          <td>Jeremiyah Love</td>
+          <td>82</td>
+          <td>Indiana</td>
+        </tr>
+        <tr>
+          <td>Peter Woods</td>
+          <td>76</td>
+          <td>South Carolina</td>
+        </tr>
+        <tr>
+          <td>Austin Barber</td>
+          <td>73</td>
+          <td>Florida</td>
+        </tr>
+        <tr>
+          <td>Fernando Mendoza</td>
+          <td>74</td>
+          <td>Indiana</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const splashScreen = document.getElementById('splashScreen');
+    const mainContent = document.getElementById('mainContent');
+
+    // Click on splash screen to trigger animation
+    splashScreen.addEventListener('click', function() {
+      splashScreen.classList.add('active');
+      
+      // Show main content after animation completes
+      setTimeout(() => {
+        splashScreen.style.display = 'none';
+        mainContent.style.display = 'block';
+        // Optional: Add fade-in animation to main content
+        mainContent.classList.add('fade-in');
+      }, 1000); // Match this with CSS animation duration
+    });
+  </script>
 
 </body>
 </html>
